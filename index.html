@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFP La Granja - Comecocos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Si el DTD tu ordenador no te ha arreglado...</h1>
+            <p>...espera jugando al PACMAN sentado 🎮</p>
+        </header>
+
+        <div class="game-wrapper">
+            <!-- Start Screen -->
+            <div id="startScreen" class="start-screen">
+                <div class="start-content">
+                    <h2 class="game-title">COMECOCOS</h2>
+                    <div class="subtitle">CIFP LA GRANJA EDITION</div>
+
+                    <div class="rules-section">
+                        <h3>📋 REGLAS DEL JUEGO</h3>
+                        <p class="story-text">Tu programación didáctica se ha caído y el viento sur la ha desperdigado
+                            por toda la finca. Tu misión será recoger todas las hojas sin sucumbir a los peligros del
+                            día a día.</p>
+                        <div class="rule-item">
+                            <span class="rule-icon">📄</span>
+                            <span class="rule-text">Recoge todas las <strong>hojas de tu programación
+                                    didáctica</strong></span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">☕</span>
+                            <span class="rule-text">Tómate un <strong>Café de Poli</strong> para tener
+                                <strong>superpoderes</strong></span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">👻</span>
+                            <span class="rule-text">Evita a <strong>El Inspector</strong>, <strong>Viernes a
+                                    última</strong> y <strong>La Guardia con los de Básica</strong></span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">⬅️⬆️⬇️➡️</span>
+                            <span class="rule-text">Usa las <strong>flechas</strong> para moverte por <strong>el
+                                    instituto</strong></span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">🐓</span>
+                            <span class="rule-text">Completa el nivel antes de que suene <strong>el
+                                    gallo</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="character-preview">
+                        <div class="preview-item">
+                            <div class="preview-logo"></div>
+                            <p>TÚ</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-ghost ghost-red"></div>
+                            <p>EL INSPECTOR</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-ghost ghost-pink"></div>
+                            <p>VIERNES A ÚLTIMA</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-ghost ghost-cyan"></div>
+                            <p>LA GUARDIA CON LOS DE BÁSICA</p>
+                        </div>
+                    </div>
+
+                    <button id="startBtn" class="start-btn">PULSA PARA EMPEZAR</button>
+                    <div class="credits">¡Buena suerte, profe! 🍀</div>
+                </div>
+            </div>
+
+            <div class="score-board">
+                <div class="score-item">Puntuación: <span id="score">0</span></div>
+                <div class="score-item">Nivel: <span id="level">1</span></div>
+            </div>
+            <canvas id="gameCanvas" width="448" height="496"></canvas>
+            <div class="controls-hint">Usa las flechas ⬅️ ⬆️ ⬇️ ➡️ para moverte</div>
+            <button id="restartBtn" class="hidden">Jugar de Nuevo</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
