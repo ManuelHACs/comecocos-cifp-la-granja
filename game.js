@@ -242,6 +242,11 @@ window.addEventListener('DOMContentLoaded', function () {
         startBtn.addEventListener('click', function () {
             console.log('Start button clicked!');
             startScreen.classList.add('hidden');
+
+            // Show header when game starts
+            const mainHeader = document.getElementById('mainHeader');
+            if (mainHeader) mainHeader.classList.remove('hidden');
+
             gameStarted = true;
             initGame();
         });
