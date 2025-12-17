@@ -539,5 +539,41 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function gameOver() {
+        gameRunning = false;
+        // Dark overlay
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.95)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Main Title
+        ctx.fillStyle = '#ef4444';
+        ctx.font = 'bold 40px Outfit';
+        ctx.textAlign = 'center';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#ef4444';
+        ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2 - 80);
+        ctx.shadowBlur = 0;
+
+        // Custom Message
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = '18px Outfit';
+        ctx.shadowBlur = 0;
+
+        const lines = [
+            "Oooh, no lo has conseguido...",
+            "Vuelve a intentarlo antes de que suban",
+            "las programaciones al SERVIDOR.",
+            "Espabila!!!"
+        ];
+
+        let lineY = canvas.height / 2 - 20;
+        lines.forEach(line => {
+            ctx.fillText(line, canvas.width / 2, lineY);
+            lineY += 25; // Line spacing
+        });
+
+        restartBtn.classList.remove('hidden');
+    }
+
     console.log('Game initialized and ready');
 });
