@@ -538,8 +538,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function gameLoop() {
         update();
-        draw();
         if (gameRunning) {
+            draw();
             animationId = requestAnimationFrame(gameLoop);
         }
     }
