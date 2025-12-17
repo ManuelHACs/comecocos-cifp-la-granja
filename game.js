@@ -566,7 +566,7 @@ window.addEventListener('DOMContentLoaded', function () {
             "Espabila!!!"
         ];
 
-        let lineY = canvas.height / 2 - 20;
+        let lineY = canvas.height / 2 - 30;
         lines.forEach(line => {
             ctx.fillText(line, canvas.width / 2, lineY);
             lineY += 25; // Line spacing
